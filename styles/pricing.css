@@ -1,0 +1,94 @@
+.pricing {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-bottom: 5rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    
+    & > .card:first-child {
+      margin-left: 3.25rem;
+    }
+
+    & > .card:last-child {
+      margin-right: 3.25rem;
+    }
+
+    & > .card:nth-child(2) {
+
+      h3 {
+        color: var(--pink-light)
+      }
+
+
+      & li::before {
+        content: "";
+        display: inline-block;
+        margin-right: 0.5rem;
+        width: 14.06px;
+        height: 14.06px;
+        background: url(../assets/icons/start-marker-pink.svg) center;
+      }
+    }
+  }
+}
+
+@media (width >= 1280px) {
+  .cards-container {
+    
+    overflow: hidden;
+    width: 65.625rem;
+    height: 37.875rem;
+    place-self: center;
+    place-content: center;
+    align-items: center;
+
+    & > .card {
+      transition-property: all;
+      transition-duration: 0.5s;
+      /* border: solid red; */
+    }
+
+    & > .card:nth-child(1){
+      transform: rotate(-15deg);
+      position: relative;
+      bottom: -4rem;
+    }
+
+    & > .card:nth-child(2) {
+      position: relative;
+      bottom: 0;
+    }
+
+    & > .card:nth-child(3) {
+      transform: rotate(15deg);
+      position: relative;
+      bottom: -4rem;
+    }
+
+    
+
+    & > .card:nth-child(1):hover, & > .card:nth-child(3):hover {
+      z-index: 10;
+      bottom: -3.5rem;
+      background-color: var(--shape-hover);
+      box-shadow: 0 0 66px #358bb927;
+    }
+
+    & > .card:nth-child(2):hover {
+      z-index: 10;
+      bottom: 0.5rem;
+      background-color: var(--shape-hover);
+      box-shadow: 0 0 66px #358bb927;
+    }
+  }
+}

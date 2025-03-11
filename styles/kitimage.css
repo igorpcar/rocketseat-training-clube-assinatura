@@ -1,0 +1,165 @@
+.kit-image {
+  aspect-ratio: 1.18;
+  max-width: 70rem;
+  position: relative;
+  margin-inline: auto;
+  margin-bottom: 5.25rem;
+
+  span {
+    font: 400 0.625rem var(--font-family);
+    display: block;
+    position: absolute;
+    /* color: var(--text-body); */
+  }
+
+  .mainbook {
+    position: absolute;
+    width: 41.92%;
+    left: 23.43%;
+    top: 15.92%;
+    /* opacity: 0.4; */
+  }
+
+  .animation-container {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    img {
+      position: absolute;
+    }
+
+    .bookmark-yellow {
+      width: 15.57%;
+      height: 56.71%;
+      top: 16.84%;
+      left: 49.5%;
+      z-index: -1;
+    }
+
+    .bookmark-purple {
+      width: 15.57%;
+      height: 56.71%;
+      top: 20.9%;
+      left: 50%;
+      z-index: -2
+    }
+
+    .pin {
+      width: 19.97%;
+      left: 27%;
+      bottom: 18%;
+      z-index: -1;
+    }
+
+    .arrow-1 {
+      width: 15.59%;
+      top: 18%;
+      left: 28%;
+    }
+
+    .arrow-1 + span{
+      top: 18%;
+      left: 28%;
+    }
+
+    .arrow-2 {
+      width: 9.41%;
+      top: 57%;
+      left: 28%;
+    }
+
+    .arrow-2 + span {
+      top: 50%;
+      left: 28%;
+    }
+
+    .arrow-3 {
+      width: 13.01%;
+      bottom: 25%;
+      right: 38%;
+    }
+
+    .arrow-3 + span {
+      bottom: 25%;
+      right: 40%;
+    }
+  }
+}
+
+@media (width >= 1280px) {    
+
+  .kit-image .animation-container {
+    
+    span {
+      font: var(--body-md)
+    }
+
+    & > * {
+      transition-property: all;
+      transition-duration: 0.8s;
+      transition-timing-function: cubic-bezier(.17,.67,.17,1.05);
+    }
+  }
+
+  .kit-image:hover .animation-container {
+    .bookmark-yellow {
+      width: 15.57%;
+      height: 56.71%;
+      top: 9.84%;
+      left: 61.5%;
+      transform: rotate(11.72deg);
+      z-index: -1;
+    }
+
+    .bookmark-purple {
+      width: 15.57%;
+      height: 56.71%;
+      top: 20.9%;
+      left: 69%;
+      transform: rotate(22.79deg);
+      z-index: -2
+    }
+
+    .pin {
+      width: 19.97%;
+      left: 13%;
+      bottom: 8%;
+      transform: rotate(-7.55deg);
+      z-index: -1;
+    }
+
+    .arrow-1 {
+      width: 15.59%;
+      top: 13%;
+      left: 10%;
+    }
+
+    .arrow-1 + span{
+      top: 7%;
+      left: 4%;
+    }
+
+    .arrow-2 {
+      width: 9.41%;
+      top: 57%;
+      left: 8%;
+    }
+
+    .arrow-2 + span {
+      top: 50%;
+      left: 4%;
+    }
+
+    .arrow-3 {
+      width: 13.01%;
+      bottom: 10%;
+      right: 20%;
+    }
+
+    .arrow-3 + span {
+      bottom: 4%;
+      right: 25%;
+    }
+  }
+}

@@ -44,7 +44,7 @@
 
 @media (width >= 1280px) {
   .cards-container {
-    
+  
     overflow: hidden;
     width: 65.625rem;
     height: 37.875rem;
@@ -55,38 +55,44 @@
     & > .card {
       transition-property: all;
       transition-duration: 0.5s;
-      /* border: solid red; */
     }
 
-    & > .card:nth-child(1){
-      transform: rotate(-15deg);
+    & > .card:nth-child(1){ 
       position: relative;
-      bottom: -4rem;
+      transform: translateX(calc(17rem + 2rem));
     }
 
-    & > .card:nth-child(2) {
-      position: relative;
-      bottom: 0;
+    &:hover .card:nth-child(1){
+      transform: rotate(-15deg) translateX(0) translateY(4rem) ;
     }
 
     & > .card:nth-child(3) {
-      transform: rotate(15deg);
       position: relative;
-      bottom: -4rem;
+      transform: translateX(calc(-17rem - 2rem));
     }
 
+    &:hover .card:nth-child(3){
+      transform: rotate(15deg) translateX(0) translateY(4rem) ;
+    }
     
 
-    & > .card:nth-child(1):hover, & > .card:nth-child(3):hover {
+    & > .card:nth-child(1):hover{
       z-index: 10;
-      bottom: -3.5rem;
+      transform: translateY(1rem) rotate(-15deg);
+      background-color: var(--shape-hover);
+      box-shadow: 0 0 66px #358bb927;
+    }
+
+    & > .card:nth-child(3):hover {
+      z-index: 10;
+      transform: translateY(1rem) rotate(15deg);
       background-color: var(--shape-hover);
       box-shadow: 0 0 66px #358bb927;
     }
 
     & > .card:nth-child(2):hover {
       z-index: 10;
-      bottom: 0.5rem;
+      transform: translateY(-1rem);
       background-color: var(--shape-hover);
       box-shadow: 0 0 66px #358bb927;
     }

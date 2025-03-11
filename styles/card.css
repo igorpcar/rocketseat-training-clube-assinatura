@@ -12,6 +12,13 @@
   @media (width >= 1280px) {
     width: 18rem;
     height: 26rem;
+
+    .bunny {
+      position: absolute;
+      width: 45px;
+      top: -50px;
+    }
+
   }
 
   &:hover {
